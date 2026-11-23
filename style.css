@@ -1,0 +1,161 @@
+:root {
+  --bg-dark: #0f172a;
+  --panel-bg: #1e293b;
+  --border-color: #334155;
+  --accent-blue: #38bdf8;
+  --accent-alert: #f43f5e;
+  --badge-green-bg: #065f46;
+  --badge-green-text: #34d399;
+  --text-main: #f8fafc;
+  --text-subtle: #94a3b8;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.viewport-container {
+  background: var(--panel-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+canvas {
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+.sidebar {
+  background: var(--panel-bg);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+
+/* Form Controls */
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+  font-weight: 500;
+}
+
+select, input[type="range"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.slider-hint {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent-blue);
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-blue);
+  background: transparent;
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* Explanation Rationale Card */
+.explanation-card {
+  background: var(--bg-dark);
+  border-left: 4px solid var(--accent-blue);
+  padding: 14px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.explanation-text {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  padding-top: 4px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.metric-value {
+  color: var(--text-main);
+  font-weight: bold;
+}

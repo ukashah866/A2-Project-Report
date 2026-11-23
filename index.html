@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explainable AR Content Placement Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Viewport Area -->
+  <div class="viewport-container">
+    <canvas id="ar-canvas" width="800" height="500"></canvas>
+  </div>
+
+  <!-- Sidebar Control Panel -->
+  <div class="sidebar">
+    <header class="sidebar-header">
+      <h2>AR Control Panel</h2>
+    </header>
+
+    <!-- Controls for user intent and preferences -->
+    <div class="control-group">
+      <label for="object-select">Virtual Object to Place:</label>
+      <select id="object-select">
+        <option value="Virtual TV Screen">Virtual TV Screen (16:9)</option>
+        <option value="Dashboard Calendar">Dashboard Calendar (Vertical)</option>
+        <option value="Ambient Light Widget">Ambient Light Widget (Compact)</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="glare-pref">Preference: Glare Avoidance Weight</label>
+      <input type="range" id="glare-pref" min="0" max="100" value="70">
+      <span class="slider-hint">High = Avoid Windows | Low = Prioritize Distance</span>
+    </div>
+
+    <!-- Action Buttons -->
+    <button id="btn-autoplace" class="btn-primary">Auto-Place Object</button>
+    <button id="btn-override" class="btn-secondary">Manual Override / Shift Spot</button>
+
+    <!-- The Explanation Card (Solves Assignment 1 Gap!) -->
+    <div id="explanation-box" class="explanation-card">
+      <div class="card-title">AI Placement Rationale</div>
+      <p id="explanation-text" class="explanation-text">
+        Select an object and click <strong>Auto-Place Object</strong> to trigger spatial placement.
+      </p>
+      <div id="metrics-container"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
